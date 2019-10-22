@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './bookmarkList.css';
-import Bookmark from '../bookmark/bookmark';
+import Bookmark from '../Bookmark/bookmark';
 
 class BookmarkList extends Component {
   render() {

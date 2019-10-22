@@ -1,7 +1,7 @@
 import React from 'react';
 import './bookmark.css';
 
-import Rating from '../rating/rating';
+import Rating from '../Rating/rating';
 
 export default function Bookmark(props) {
   return (

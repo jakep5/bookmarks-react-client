@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './bookmarkApp.css';
-import BookmarkList from '../bookmarkList/bookmarkList';
-import Fab from '../fab/fab';
+import BookmarkList from '../BookmarkList/bookmarkList';
+import Fab from '../Fab/fab';
 
 class BookmarkApp extends Component {
   render() {
