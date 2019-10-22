@@ -27,6 +27,37 @@ class App extends Component {
       showAddForm: false
     }
   }
+
+  componentDidMount() {
+    const url = 'https://tf-ed-bookmarks-api.herokuapp.com/v3/bookmarks';
+    const options = {
+      method: 'GET',
+      headers : {
+        "Authorization" : "Bearer $2a$10$qLX0g5cpFiz5jiwzM4Sr6uaGKDOd/Y4T956UZ7TCZijqNC3iTRZtq",
+        "Content-Type": "application/json",
+      }
+    };
+    fetch(url, options)
+      .then(response => {
+        if(!response.ok) {
+          throw new Error('Something went wrong, please try again later.')
+        }
+        return response
+      })
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          bookmarks: data,
+          error: null,
+        });
+      })
+      .catch(err => {
+        this.setState({
+          error: err.message
+        });
+      })
+  }
+
   render() {
     const page = this.state.showAddForm 
       ? <AddBookmark />
