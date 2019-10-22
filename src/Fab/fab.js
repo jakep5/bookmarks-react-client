@@ -4,7 +4,7 @@ import './fab.css';
 class Fab extends Component {
   render() {
     return (
-      <div className="fab">
+      <div className="fab" onClick = {e => this.props.showForm(true)}> {/* true is passed as show parameter to setShowAddForm */}
         &#43;
       </div>
     );
